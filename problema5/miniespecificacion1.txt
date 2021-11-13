@@ -1,0 +1,65 @@
+// Problema5
+// Se debe generar un algoritmo y miniespecificación que permita calcular 
+// y mostrar el valor total a pagar mensual de servicios básicos de una persona. 
+// Los servicios básicos son: agua, telefono. Si la persona es menor a 20 años se descuenta 
+// el 20% del total mensual. Para calcular el costo mensual a pagar el agua, se debe ingresar 
+// el número de litros de agua consumidos en el mes y el costo de cada litro de agua.
+// Para calcular el costo del teléfono, se debe ingresar el número de minutos gastados en el mes y el costo de cada minuto.
+
+// ALGORITMO
+1.Inicio
+2.Preguntar la cantidad de litros de agua consumidos en el mes
+3.Preguntar el costo de cada litro de agua
+4.Preguntar el numero de minutos gastados en el mes
+5.Pregunrar el costo de cada minuto
+6.Preguntar la edad del usuario
+7.Calcular el total a pagar del agua multiplicando el cantidad consumida por el costo del litro de agua
+8.Calcular el total a pagar del telefono multiplicando el numero de minutos gastados por el costo del minuto
+9.Sumar la cantidad total a pagar del agua y del telefono
+10.En caso que el usuario tenga menos de 20 años aplicar un descuento del 20% a la cantidad total apagar
+11.Finf
+
+// MINIESPECIFICACIÓN
+1.Inicio
+
+// Declarar variables
+
+2.litros_consumidos, d[0,n]
+3.costo_litro, d[0,n]
+4.minutos_gastados, d[0,n]
+5.costo_minuto, d[0,n]
+6.edad, i[0,n]
+7.total_agua, d[0,n]
+8.total_telefono, d[0,n]
+9.total_SB, d[0,n]
+10.porcentaje, d[0,n] <-- 20
+11.descuento, d[0,n]
+
+12.Escribir "Ingresar litros consumidos de agua"
+13.Leer litros_Consumidos
+
+14.Escribir "Ingresar Costo de litro de agua"
+15.Leer costo_litro
+
+16.Escribir "Ingresar minutos gastados durante el mes"
+17.Leer minutos_gastados
+
+18.Escribir "Ingresar el costo por minuto"
+19.Leer costo_minuto
+
+20.Escribir "Ingrese su edad"
+21.Leer edad
+
+22.total_agua<-- litros_consumidos * costo_litro
+23.total_telefono <-- minutos_gastados * costo_minuto
+24.total_SB <-- total_agua + total_telefono
+
+25.Si edad < 20 entonces
+	//total_SB --- 100%
+	//x --------- 20%
+26.descuento <--(porcentaje * total_SB)/100
+27.total_SB <-- total_SB - descuento
+28.Fin Si
+
+29.Escribir "El valor total a pagar es: " + total_SB
+30.fin
